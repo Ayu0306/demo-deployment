@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.UserEntity;
-import com.example.demo.repository.Repository;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.service.Service;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.List;
 public class DemoController {
 
     @Autowired
-    Repository repository;
+    UserRepository repository;
 
     @GetMapping("/users")
     public List<UserEntity> getAllUsers() {
